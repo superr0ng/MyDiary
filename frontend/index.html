@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Diary</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="index.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.0/axios.min.js"
+      integrity="sha512-aoTNnqZcT8B4AmeCFmiSnDlc4Nj/KPaZyB5G7JnOnUEkdNpCZs1LCankiYi01sLTyWy+m2P+W4XM+BuQ3Q4/Dg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+</head>
+<body>
+    <div class="overview">
+        <h1>My Diary</h1>
+        <button class="add-diary-button">新增日記卡</button>
+    </div>
+    <div class="filter">
+        <select class="filter">
+            <option value="">請選擇標籤或心情</option>
+            <option value="學業">學業</option>
+            <option value="人際">人際</option>
+            <option value="社團">社團</option>
+            <option value="快樂">快樂</option>
+            <option value="生氣">生氣</option>
+            <option value="難過">難過</option>
+            <option value="我心裡只有恨">我心裡只有恨</option>
+        </select>
+    </div>
+    <section class="items"></section>
+
+    <!-- Edit Page -->
+    <div class="diary-edit-page" data-id="">
+        <div class="edit-page-container">
+            <div class="edit-date-container">
+                請選擇日期
+                <input type="date" class="edit-page-date">
+            </div>
+            <div class="edit-tag-mood">
+                <select class="edit-page-tag">
+                    <option value="">請選擇標籤</option>
+                    <option value="學業">學業</option>
+                    <option value="人際">人際</option>
+                    <option value="社團">社團</option>
+                </select>
+                <select class="edit-page-mood">
+                    <option value="">請選擇心情</option>
+                    <option value="快樂">快樂</option>
+                    <option value="生氣">生氣</option>
+                    <option value="難過">難過</option>
+                    <option value="我心裡只有恨">我心裡只有恨</option>
+                </select>
+            </div>
+            <!-- TODO: wrap text and image as page content
+                Rename the textarea as edit-page-input
+                Add image area and preview function
+            -->
+            <div class="edit-page-content">
+                <textarea
+                    class="edit-page-text"
+                    placeholder="請輸入日記內容..."
+                    tabindex="2"
+                ></textarea>
+                <div class="edit-page-img-container">
+                    <input type="file"  accept="image/*" name="image" class="edit-input-img">
+                    <img class="edit-page-img" src="" alt="">                    
+                </div>
+            </div>
+            <div class="edit-buttons">
+                <button class="save-button">儲存</button>
+                <button class="cancel-button">取消</button>
+            </div>
+        </div>        
+    </div>
+    
+    <!-- Read Page -->
+    <div class="diary-read-page" data-id="">
+        <div class="read-page-container">
+            <div class="close-button">x</div>
+            <div class="read-date-container">
+                <div class="read-page-date"></div>
+            </div>
+            <div class="read-tag-mood">
+                <button class="read-page-tag"></button>
+                <button class="read-page-mood"></button>
+            </div>
+            <!-- TODO: wrap text and image as page content
+                Rename the textarea as edit-page-input
+                Display image
+            -->
+            <div class="read-page-content">
+                <div class="read-page-text"></div>
+                <div class="read-page-img-container">
+                    <img class="read-page-img" src="" alt="">
+                </div>
+            </div>
+            <div class="read-buttons">
+                <button class="delete-button">刪除</button>
+                <button class="edit-button">編輯</button>
+            </div>
+            <!-- TODO: show image -->
+        </div>
+    </div>
+
+</body>
+<template class="item-template">
+    <div class="item-container" id="">
+        <p class="item-date"></p>
+        <div class="item-tag-mood">
+            <button class="item-tag"></button>
+            <button class="item-mood"></button>    
+        </div>
+        <p class="item-text"></p>
+        <img class="item-img" src="" alt="" style="display: none;">
+    </div>
+</template>
+    
+</html>

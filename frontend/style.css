@@ -1,0 +1,264 @@
+:root {
+    --todo-intput-height: 3rem;
+    --todo-intput-font-size: 2rem;
+}
+  
+body {
+    background-color: #edede9;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 15vh;
+}
+  
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    white-space: nowrap;
+}
+select.filter{
+    background-color: #9A8D84;
+    color: #EDEDE9;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px;
+    border: transparent;
+    margin: 10px;
+}
+
+.add-diary-button{
+    font-size: 1rem;
+    border-radius: 25px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: #433023;
+    color: #fff;
+    float: right;
+}
+
+/* edit page */
+.diary-edit-page, .diary-read-page{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px;
+    margin: auto;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.edit-page-container, .read-page-container{
+    /* position: relative; */
+    background-color: #F5EBE0;
+    margin: auto;
+    padding: 30px;
+    border-radius: 10px;
+    width: 50%;
+    height: 50%;
+}
+.edit-date-container, .read-date-container{
+    margin: 10px;
+}
+.edit-tag-mood{
+    margin: 10px;
+}
+.edit-page-tag{
+    font-size: 0.5em;
+    border-radius: 25px;
+    padding: 5px 10px 5px 10px;
+    cursor: pointer;
+    border: none;
+    background-color: #433023;
+    color: #fff;
+}
+.edit-page-mood{
+    font-size: 0.5em;
+    border-radius: 25px;
+    padding: 5px 10px 5px 10px;
+    border: none;
+    background-color: #70645C;
+    color: #fff;
+}
+.edit-page-content, .read-page-content{
+    display: flex;
+    margin: auto;
+    background-color: #FAF5F0;
+    width: 100%;
+    height: 70%;
+}
+.edit-page-text, .read-page-text{
+    background-color: transparent;
+    box-sizing: border-box;
+    padding: 10px;
+    border: none;
+    resize: none;
+    width: 50%;
+    height: 100%;
+}
+.edit-page-img-container, .read-page-img-container{
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    margin: auto;
+    /* text-align:center; */
+    /* overflow: auto; */
+    width: 50%;
+    height: 100%;
+}
+.edit-input-img{
+    display: block;
+    align-items: start;
+    /* box-sizing: border-box; */
+    /* position: relative; */
+
+    /* top: -90%;
+    width: 40%; */
+}
+.edit-page-img, .read-page-img{
+    display: block;
+    align-items: center;
+    /* position: relative; */
+    /* padding: 15px 0 0 0; */
+    /* width: 90%; */
+    /* height: 90%; */
+    max-width: 90%;
+    max-height: 90%;
+    margin: auto;
+}
+.edit-buttons, .read-buttons{
+    margin-top: 10px;
+    float: right;
+}
+.save-button{
+    font-size: 1em;
+    border-radius: 15px;
+    padding: 5px 10px 5px 10px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: #433023;
+    color: #fff;
+}
+.cancel-button{
+    font-size: 1em;
+    border-radius: 15px;
+    padding: 5px 10px 5px 10px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: #D6CBC2;
+    color: #433023;
+}
+
+/* Read page */
+.diary-read-page{
+    display: none;
+}
+.close-button{
+    float: right;
+    font-size: 2em;
+    font-weight: bold;
+    cursor: pointer;
+}
+.read-page-date{
+    font-weight: bold;
+    font-size: large;
+}
+.read-tag-mood{
+    margin: 10px;
+}
+.read-page-tag{
+    font-size: 0.5em;
+    border-radius: 25px;
+    padding: 5px 20px 5px 20px;
+    border: none;
+    background-color: #433023;
+    color: #fff;
+}
+.read-page-mood{
+    font-size: 0.5em;
+    border-radius: 25px;
+    padding: 5px 20px 5px 20px;
+    border: none;
+    background-color: #70645C;
+    color: #fff;
+}
+
+.edit-button{
+    font-size: 1em;
+    border-radius: 15px;
+    padding: 5px 10px 5px 10px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: #433023;
+    color: #fff;
+}
+.delete-button{
+    font-size: 1em;
+    border-radius: 15px;
+    padding: 5px 10px 5px 10px;
+    margin: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: #da3434;
+    color: #fff;
+}
+.item-tag{
+    font-size: 0.5em;
+    border-radius: 25px;
+    padding: 5px 10px 5px 10px;
+    border: none;
+    /* cursor: pointer; */
+    background-color: #433023;
+    color: #fff;
+}
+.item-mood{
+    font-size: 0.5em;
+    border-radius: 25px;
+    padding: 5px 10px 5px 10px;
+    border: none;
+    /* cursor: pointer; */
+    background-color: #70645C;
+    color: #fff;
+}
+
+.items{
+    display: flex;
+    flex-wrap: wrap;
+
+    /* flex-basis: 20% */
+}
+.item-container{
+    /* flex-basis: 25%; */
+    border-radius: 10%;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+    width: 160px; /* Full width */
+    height: 120px; /* Full height */
+    background-color: #DED6CE;
+}
+.item-date{
+    font-size: 1em;
+    font-weight: normal;
+    margin: 5px;
+}
+.item-tag-mood{
+    margin: 5px;
+}
+.item-text{
+    margin: auto;
+    text-overflow: ellipsis;
+    width: 100%;
+    height: 3em;
+    line-height: 1em;
+    font-size: 0.9em;
+    overflow: auto;
+    line-break: auto;
+}
